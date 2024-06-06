@@ -111,7 +111,7 @@
     });
 
     function showDetails(id) {
-        fetch(`/medicines/${id}/`)
+        fetch(`/${id}/`)
             .then(response => response.json())
             .then(data => {
                 document.getElementById('modal-name').innerText = data.name;
@@ -122,10 +122,10 @@
                 document.getElementById('modal-batch-number').innerText = `Batch Number: ${data.batch_number}`;
                 document.getElementById('modal-other-details').innerText = `Other Info: ${data.other_details}`;
                 if (document.getElementById('modal-edit-link')) {
-                    document.getElementById('modal-edit-link').href = `/medicines/${id}/update/`;
+                    document.getElementById('modal-edit-link').href = `/${id}/update/`;
                 }
                 if (document.getElementById('modal-delete-form')) {
-                    document.getElementById('modal-delete-form').action = `/medicines/${id}/delete/`;
+                    document.getElementById('modal-delete-form').action = `/${id}/delete/`;
                 }
                 document.getElementById('medicine-modal').classList.remove('hidden');
             });
