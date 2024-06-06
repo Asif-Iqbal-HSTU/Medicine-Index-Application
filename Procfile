@@ -1,1 +1,0 @@
-web: gunicorn medicine_index.wsgi
