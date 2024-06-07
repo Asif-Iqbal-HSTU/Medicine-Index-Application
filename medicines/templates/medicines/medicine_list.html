@@ -18,6 +18,7 @@
     </form>
 </div>
 
+
 <div id="medicine-list" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-6">
     {% for medicine in medicines %}
         <div data-name="{{ medicine.name }}" data-generic="{{ medicine.generic_name }}" class="medicine-card max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
